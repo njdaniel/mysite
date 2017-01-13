@@ -2,7 +2,7 @@ import datetime
 
 from django.test import TestCase
 from django.utils import timezone
-from  django.urls import reverse
+from django.urls import reverse
 
 from .models import Question
 
@@ -13,7 +13,7 @@ class QuestionMethodTests(TestCase):
 
     def test_was_published_recently_with_future_question(self):
         """
-        wass_published_recently() should return False for the questions whose pub_date is in the future.
+        was_published_recently() should return False for the questions whose pub_date is in the future.
         :return:
         """
         time = timezone.now() + datetime.timedelta(days=30)
